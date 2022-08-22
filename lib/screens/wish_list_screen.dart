@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import '../data/data_provider.dart';
-import '../widgets/discover_element.dart';
 
 class WishList extends StatelessWidget {
   @override
@@ -29,14 +28,14 @@ class WishList extends StatelessWidget {
                   height: 50,
                 ),
                 Text(
-                  'Stwórz swoją pierwszą listę życzeń',
+                  'Create your first wish list',
                   style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24),
                 ),
                 SizedBox(
                   height: 15,
                 ),
                 Text(
-                  'Wyszykując wyniki, klikaj serduszko, by miejsca lub atrakcje, które najbardziej Ci się podobają, zapisać na liście życzeń.',
+                  'When searching for results, click on the heart to save the places or attractions you like best to your wishlist.',
                   style: TextStyle(color: Colors.grey),
                 )
               ])

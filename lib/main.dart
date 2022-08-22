@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
+import 'screens/Discover_element_details.dart';
 import './screens/main_page.dart';
 import 'data/data_provider.dart';
 
@@ -18,6 +19,7 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider(create: (ctx) => DataProvider()),
       ],
       child: MaterialApp(
+        debugShowCheckedModeBanner: false,
         title: 'Flutter Demo',
         home: MainPage(),
       ),

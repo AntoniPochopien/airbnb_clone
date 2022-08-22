@@ -48,45 +48,41 @@ class DataProvider with ChangeNotifier {
   List<Tab> tabsList = [
     Tab(
         child: Text(
-          'Wyspy',
+          'Beach',
         ),
         icon: Icon(
-          Icons.sunny,
+          Icons.wb_sunny_outlined,
         )),
     Tab(
         child: Text(
-          'Wyspy',
+          'Budgetary',
         ),
         icon: Icon(
-          Icons.sunny,
+          Icons.account_balance_wallet_outlined,
         )),
     Tab(
         child: Text(
-          'Wyspy',
+          'Beautiful',
+        ),
+        icon: Icon(Icons.photo_camera_back_outlined)),
+    Tab(
+        child: Text(
+          'Modern',
+        ),
+        icon: Icon(Icons.apartment_outlined)),
+    Tab(
+        child: Text(
+          'The best reviews',
         ),
         icon: Icon(
-          Icons.sunny,
+          Icons.assessment_outlined,
         )),
     Tab(
         child: Text(
-          'Wyspy',
+          'Night life',
         ),
         icon: Icon(
-          Icons.sunny,
-        )),
-    Tab(
-        child: Text(
-          'Wyspy',
-        ),
-        icon: Icon(
-          Icons.sunny,
-        )),
-    Tab(
-        child: Text(
-          'Wyspy',
-        ),
-        icon: Icon(
-          Icons.sunny,
+          Icons.brightness_3,
         )),
   ];
 
