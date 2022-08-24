@@ -1,3 +1,4 @@
+import 'package:airbnb_clone/main.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -62,6 +63,7 @@ class TripsScreen extends StatelessWidget {
                                     borderRadius: BorderRadius.circular(10)),
                               ),
                               onPressed: () {
+                                streamController.add(0);
                                 // Navigator.push(
                                 //     context,
                                 //     MaterialPageRoute(

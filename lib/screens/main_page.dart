@@ -7,7 +7,9 @@ import 'trips_screen.dart';
 import 'wish_list_screen.dart';
 
 class MainPage extends StatefulWidget {
-  const MainPage({Key? key}) : super(key: key);
+  final Stream<int> stream;
+
+  MainPage(this.stream);
 
   @override
   State<MainPage> createState() => _MainPageState();
@@ -15,9 +17,18 @@ class MainPage extends StatefulWidget {
 
 class _MainPageState extends State<MainPage> {
   int currentIndex = 0;
-  callback() {
+
+  @override
+  void initState() {
+    super.initState();
+    widget.stream.listen((value) {
+      changeIndex(value);
+    });
+  }
+
+  void changeIndex(value) {
     setState(() {
-      currentIndex = 0;
+      currentIndex = value;
     });
   }
 
