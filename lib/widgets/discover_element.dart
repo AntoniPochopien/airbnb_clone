@@ -45,7 +45,7 @@ class _DiscoverElementState extends State<DiscoverElement> {
         );
       },
       child: Container(
-        margin: EdgeInsets.symmetric(vertical: 20),
+        margin: const EdgeInsets.symmetric(vertical: 20),
         width: double.infinity,
         height: MediaQuery.of(context).size.height * 0.5,
         child: Column(
@@ -53,7 +53,7 @@ class _DiscoverElementState extends State<DiscoverElement> {
           children: [
             Stack(
               children: [
-                Container(
+                SizedBox(
                   height: 300,
                   child: Card(
                       semanticContainer: true,
@@ -100,11 +100,12 @@ class _DiscoverElementState extends State<DiscoverElement> {
               children: [
                 Text(
                   widget.name,
-                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
+                  style: const TextStyle(
+                      fontWeight: FontWeight.bold, fontSize: 18),
                 ),
                 Row(
                   children: [
-                    Icon(
+                    const Icon(
                       Icons.star_rounded,
                       color: Colors.black,
                       size: 18,
@@ -114,18 +115,18 @@ class _DiscoverElementState extends State<DiscoverElement> {
                 ),
               ],
             ),
-            Text(
-              'Gospodarz profesjonalny',
+            const Text(
+              'Profesional host',
               style: TextStyle(color: Colors.grey),
             ),
-            Text(
-              '22-29 paź',
+            const Text(
+              '22-29 NOV',
               style: TextStyle(color: Colors.grey),
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
-            Text('${widget.price} noc'),
+            Text('${widget.price}\$ Night'),
           ],
         ),
       ),

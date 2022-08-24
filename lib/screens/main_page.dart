@@ -15,14 +15,19 @@ class MainPage extends StatefulWidget {
 
 class _MainPageState extends State<MainPage> {
   int currentIndex = 0;
+  callback() {
+    setState(() {
+      currentIndex = 0;
+    });
+  }
+
   final screens = [
     DiscoverScreen(),
     WishList(),
     TripsScreen(),
-    MailBoxScreen(),
-    ProfileScreen(),
+    const MailBoxScreen(),
+    const ProfileScreen(),
   ];
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -30,7 +35,9 @@ class _MainPageState extends State<MainPage> {
       bottomNavigationBar: BottomNavigationBar(
           currentIndex: currentIndex,
           showUnselectedLabels: true,
-          onTap: (index) => setState(() => currentIndex = index),
+          onTap: (index) {
+            setState(() => currentIndex = index);
+          },
           selectedItemColor: Colors.pink,
           unselectedItemColor: Colors.grey,
           items: const [

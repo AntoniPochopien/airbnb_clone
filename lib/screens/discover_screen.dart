@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import 'main_page.dart';
 import '../widgets/discover_element.dart';
 import '../data/data_provider.dart';
 
@@ -14,22 +13,22 @@ class DiscoverScreen extends StatelessWidget {
       length: data.tabsList.length,
       child: GestureDetector(
         onTap: () {
-          FocusScope.of(context).requestFocus(new FocusNode());
+          FocusScope.of(context).requestFocus(FocusNode());
         },
         child: Scaffold(
             appBar: AppBar(
                 backgroundColor: Colors.white,
                 centerTitle: true,
-                title: Container(
+                title: SizedBox(
                   height: 50,
                   width: double.infinity,
                   child: Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 20),
                     child: TextField(
                       decoration: InputDecoration(
-                          prefixIcon: Icon(Icons.search),
+                          prefixIcon: const Icon(Icons.search),
                           suffixIcon: IconButton(
-                            icon: Icon(Icons.tune),
+                            icon: const Icon(Icons.tune),
                             onPressed: () {},
                           ),
                           border: OutlineInputBorder(
@@ -42,7 +41,7 @@ class DiscoverScreen extends StatelessWidget {
                   ),
                 ),
                 bottom: PreferredSize(
-                  preferredSize: Size.fromHeight(80),
+                  preferredSize: const Size.fromHeight(80),
                   child: TabBar(
                     labelColor: Colors.black,
                     unselectedLabelColor: Colors.grey,

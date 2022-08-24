@@ -46,47 +46,48 @@ class DataProvider with ChangeNotifier {
         ])
   ];
   List<Tab> tabsList = [
-    Tab(
-        child: Text(
-          'Beach',
-        ),
+    const Tab(
         icon: Icon(
           Icons.wb_sunny_outlined,
-        )),
-    Tab(
-        child: Text(
-          'Budgetary',
         ),
+        child: Text(
+          'Beach',
+        )),
+    const Tab(
         icon: Icon(
           Icons.account_balance_wallet_outlined,
+        ),
+        child: Text(
+          'Budgetary',
         )),
-    Tab(
+    const Tab(
+        icon: Icon(Icons.photo_camera_back_outlined),
         child: Text(
           'Beautiful',
-        ),
-        icon: Icon(Icons.photo_camera_back_outlined)),
-    Tab(
+        )),
+    const Tab(
+        icon: Icon(Icons.apartment_outlined),
         child: Text(
           'Modern',
-        ),
-        icon: Icon(Icons.apartment_outlined)),
-    Tab(
-        child: Text(
-          'The best reviews',
-        ),
+        )),
+    const Tab(
         icon: Icon(
           Icons.assessment_outlined,
-        )),
-    Tab(
-        child: Text(
-          'Night life',
         ),
+        child: Text(
+          'The best reviews',
+        )),
+    const Tab(
         icon: Icon(
           Icons.brightness_3,
+        ),
+        child: Text(
+          'Night life',
         )),
   ];
 
   List<ElementModel> wishList = [];
+  List<ElementModel> bookedTrips = [];
 
   void toggleFav(objectId) {
     final index = elements.indexWhere((element) => element.id == objectId);
@@ -97,6 +98,15 @@ class DataProvider with ChangeNotifier {
       wishList.remove(elements[index]);
     }
 
+    notifyListeners();
+  }
+
+  void addTrip(objectId) {
+    final index = elements.indexWhere((element) => element.id == objectId);
+    if (bookedTrips.contains(elements[index])) {
+      return;
+    }
+    bookedTrips.add(elements[index]);
     notifyListeners();
   }
 }
